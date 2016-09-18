@@ -1,0 +1,48 @@
+
+Declaring and using Integer types
+• The following code along with its comments will show you how much space all types of integers occupy 
+• This helps you decide which type to use when performing a certain task in relation to how much its size is and what range of values it covers
+/*
+Integer Types
+__________________________________________________________________________________________
+   Type          |  Size           | Range
+
+   char          |      1 byte     | -128 to 127 or 0 to 255
+   unsigned char |      1 byte     | 0 to 255
+   signed char   |      1 byte     | -128 to 127
+    unsigned int |  2 or 4 bytes   | 0 to 65,535 or 0 to 4,294,967,295
+    short        |  2 or 4 bytes   | -32,768 to 32,767
+   unsigned short|  2 or 4 bytes   | 0 to 65,535
+    long         |  2 or 4 bytes   | -2,147,484,648 to 2,147,483,647
+    unsigned long|  2 or 4 bytes   | 0 to 4,294,967,295
+
+___________________________________________________________________________________________
+
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+
+    puts("Memory size of each type");
+    puts("--------------------------------------------\n");
+    //Sizes of integer types
+    printf("Storage size for char:             %lu byte\n",sizeof(char));
+    printf("Storage size for unsigned char:    %lu bytes\n",sizeof(unsigned char));
+    printf("Storage size for signed char:      %lu bytes\n",sizeof(signed char));
+    printf("Storage size for int:              %lu bytes\n",sizeof(int));
+    printf("Storage size for unsigned int:     %lu bytes\n",sizeof(unsigned int));
+    printf("Storage size for short:            %lu bytes\n",sizeof(signed short));
+    printf("Storage size for unsigned short:   %lu bytes\n",sizeof(unsigned short));
+    printf("Storage size for long:             %lu bytes\n",sizeof(long));
+    printf("Storage size for unsigned long:    %lu bytes\n",sizeof(unsigned long));
+
+    //Size of void type
+    printf("Storage size for void:             %lu byte\n",sizeof(void));
+    puts("--------------------------------------------\n");
+
+    return 0;
+
+}
