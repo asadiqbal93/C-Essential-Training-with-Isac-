@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+
+//Defining variables over here and assigning values to them for example the price of gas in pakistan will be in float
+  float priceOfGasInPK = 68.99; //Recently the price of petrol in pakistan
+  int y = 0;
+  short a = 1;
+  double radius = 2.34567;
+  y=12;
+
+//using printf function which is available in C libraries which allows the coder to display the results onto the console
+
+  printf("priceOfGasInPK: %f \n",priceOfGasInPK);
+  printf("y: %d\n",y);
+  printf("a: %d\n",a);
+  printf("radius: %lf\n",radius);
+
+  return 0;
+
+
+}
