@@ -1,0 +1,126 @@
+main.c
+
+#include<stdio.h>
+#include<stdlib.h>
+
+#include "specialTask.h"
+
+//Function prototypes
+    void task_1(void);
+    void task_2(void);
+    void task_3(void);
+
+    int main(void){
+    puts("!!!!HELLO WORLD!!!!");
+
+    task_1();
+    task_2();
+    specialTask_1();
+    task_3();
+
+    specialTask_2();
+
+    return EXIT_SUCCESS;
+
+    }
+
+    void task_1(void){
+    //The code that makes up the task goes here
+
+    specialTask_3();
+
+    }
+
+    void task_2(void){
+    //The code that makes up the task goes here
+
+    specialTask_4();
+    specialTask_5();
+
+    }
+
+    void task_3(void){
+    //The code that makes up the task goes here
+    puts("Enter a number");
+    getchar();
+
+
+    }
+______________________________________________________________
+specialTask.c
+
+
+void specialTask_1(void){
+
+        //Code goes here
+        //More code
+        //even more code.. as much as needed
+
+        puts("specialTask_1 was called");
+
+
+}
+
+void specialTask_2(void){
+
+
+        //Code goes here
+        //More code
+        //even more code.. as much as needed
+
+        puts("specialTask_2 was called");
+
+
+}
+
+void specialTask_3(void){
+
+
+        //Code goes here
+        //More code
+        //even more code.. as much as needed
+
+        puts("specialTask_3 was called");
+
+
+}
+void specialTask_4(void){
+
+
+        //Code goes here
+        //More code
+        //even more code.. as much as needed
+
+        puts("specialTask_4 was called");
+
+
+}
+void specialTask_5(void){
+
+
+        //Code goes here
+        //More code
+        //even more code.. as much as needed
+
+        puts("specialTask_5 was c5alled");
+
+
+}
+_______________________________________________________
+specialTask.h
+
+#ifndef SPECIALTASK_H_
+#define SPECIALTASK_H_
+
+void specialTask_1(void);
+void specialTask_2(void);
+void specialTask_3(void);
+void specialTask_4(void);
+void specialTask_5(void);
+
+
+
+
+
+#endif // SPECIALTASK_H_
+
