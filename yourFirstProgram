@@ -1,0 +1,15 @@
+#include<stdio.h> //A link to an external library file
+
+int main(){     //A necessary function in every C program "int" means that this program must return an out put
+
+    int aNumber;    //An integer variable
+
+    printf("Please enter a number: ");      //Display a message on the screen
+    scanf("%d",&aNumber);       //Receive and store the value entered by the user
+
+    printf("You entered %d", aNumber); //Display a feedback to the user about the input he did
+    getchar();       //A "trick" to prevent the program window
+
+    return 0;
+
+}
