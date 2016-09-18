@@ -1,0 +1,19 @@
+/*
+The Void type
+*Specifies that no value(no data) is needed
+*Adds clarity to code and debugging
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void someFunction(void);
+//Note the void type in main(void)
+int main(void){
+        
+        void *ptr;
+
+        return EXIT_SUCCESS;
+
+
+}
