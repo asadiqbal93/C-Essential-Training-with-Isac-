@@ -1,0 +1,34 @@
+/*
+Strings
+* "I am an example of a string in C"
+* There is no string type in C
+* Strings are stored in arrays of type char
+*   char address[30];
+* Prelude to Arrays
+* Arrays: sequential collections of elements of similar type
+* An array of 32 characters: " I am an example of a string in C"
+                                012345678901234567890123456787901
+                                    10      20      30
+
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    puts("Hello World!!!"); //This is a string...
+
+    char address[30] = "123 Some Street , SomeCity , PK , 12345";
+                        //012345678901234567890123456787901
+                        // 10      20      30
+              /*
+              Notice that the string above is longer than 30 characters allocated , hence the warning message is displayed
+              */
+
+    char name[40] = "Firstname Middle Name LastName";
+                    //012345678901234567890123456787901
+
+        return 0;
+
+}
