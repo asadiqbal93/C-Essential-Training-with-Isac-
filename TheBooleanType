@@ -1,0 +1,35 @@
+/*
+The Boolean Type
+* Named after mathematician George Boole
+* Denotes a value of TRUE or FALSE
+* Boolean types are not defined in standard C
+*   1 is equivalent to TRUE.
+*   0 is equivalent to FALSE.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+//stdbool.h is part of the c99 standard
+// it defines a bool type as true=1 and flase=0
+
+//An alternative is to manually define a new type:
+typedef int Bool; //typedef is when you are defining it manually , mostly for clarity (for different type of variables you create)
+#define True 1
+#define False 0
+
+
+int main(void){
+
+    Bool aBooleanVariable;
+    aBooleanVariable = True;
+    printf("The value of aBooleanVariable is  %d when it is 'True'\n",aBooleanVariable);
+    //bool anotherBoolVariable
+
+    aBooleanVariable = False;
+    printf("The value of aBooleanVariable is  %d when it is 'False'\n",aBooleanVariable);
+
+    return EXIT_SUCCESS;
+
+}
