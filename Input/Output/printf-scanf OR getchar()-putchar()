@@ -1,0 +1,46 @@
+/*
+Input/Output
+____________________________________________________________________________________________________________
+* Input consist of bytes of data that are entered via screen ,
+  keyboard , or network , and stored in memory.
+*
+* Output consist of bytes of data from memory to a device like screen , printer , disk.
+* The <stdio.h> library includes standard functionality that enables screen-based I/O.
+
+Main I/O Functions
+
+*printf - provides powerful formatting features for displaying multiple types of data from a computer screen
+*scanf - is the main vehicle for reading data from a computer screen
+*Both scanf and printf offer broad conversion capabilities across data types
+
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+
+    char name[20],address[30];
+
+    char c;
+    printf("How do you feel on a scale of 1-5?");
+    c = getchar();
+
+        printf("Enter name: ");
+        scanf("%s", &name);
+
+        printf("Enter address: ");
+        scanf("%s", &address);
+
+        printf("Entered Name:%s\n", name);
+        printf("Entered address:%s\n",address);
+
+        printf("You said you feel: ");
+        putchar(c);
+
+
+      return EXIT_SUCCESS;
+
+
+}
