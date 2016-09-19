@@ -1,0 +1,57 @@
+/*
+    Expressions vs Statements
+    -An expression represents a single data item
+    -A statement carries out some definite action
+    -Should create custom statements to break them
+
+    Expression statement example
+    a = 6;
+    c = a + b;
+    ++j;
+
+    Compound statement example
+
+    {
+        pi = 3.2314
+        circumference  = 2. *pi *radius;
+        area = pi * radius * radius;
+
+    }
+
+*/
+
+
+
+#include <stdio.h>
+#include<math.h>
+#include <stdlib.h>
+
+int main(void){
+
+    puts("Statements and expressions:");
+    puts("---------------------------");
+
+    puts("These are simple statements without output:");
+    int a = 6;
+    int b = 3;
+    int c = a + b;
+    int j = 0;
+    ++j;
+    // Below this /*Add comment to the whole code and see if it shows any result!?*/
+
+
+    puts("---------------------------");
+    puts("This is a compound statement:");
+
+    double radius = 5.5;
+    double circumference = 2. * M_PI * radius;
+    double area = M_PI * radius * radius;
+    printf("The area is: %f \n",area);
+    printf("The circumference is: %f \n",circumference);
+
+
+
+    return 0;
+
+
+}
