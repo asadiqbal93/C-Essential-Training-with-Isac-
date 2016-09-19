@@ -1,0 +1,47 @@
+/*
+    Performing Bit-Level calculations with bitwise operations
+___________________________________________________
+   Group 1        |  Group 2                     |
+
+  & And        | ~ one's complement (0-1,1-0)    |
+  | OR         |      >> right shift             |
+   ^ XOR       |      << left shift              |
+___________________________________________________
+
+
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    puts("Bit-level calculations:");
+    puts("-----------------------");
+
+    unsigned int x = 10;
+    unsigned int y = 1;
+    unsigned int result;
+
+    result = x & y;
+    printf("x & y = %d\n",result);
+
+    result = x | y;
+    printf("x | y = %d\n",result);
+
+    result = x ^ y;
+    printf("x ^ y = %d\n",result);
+     //Right-shift 1 is equivalent to dividing by 2
+     // See note on binary arithmetic
+    result = x >> y;
+    printf("x >> y = %d\n",result);
+     // Left-side 1 is equivalent to multiplying by 2
+     // See note on binary arithmetic
+    result = x << y;
+    printf("x << y = %d\n",result);
+
+
+    return 0;
+
+
+}
