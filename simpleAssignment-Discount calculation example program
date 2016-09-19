@@ -1,0 +1,46 @@
+/*
+ Implementing Simple Assignment Statements
+ - size = 12;
+ - time = time +1; (shortcut notation time += 1;)
+ -  finalPrice = originalValue + tax - discount;
+
+*/
+
+//Simple program for sales to clarify the assignment statements
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    //C has a full-fledged calculator ability
+    //and you can harness all the power of your computer
+
+    //Variable declaration and initialization
+    double originalPrice = 0.0;
+    double tax           = 0.0;
+    double discount      = 0.0;
+    double specialPrice  = 0.0;
+
+    printf("Enter the original price:");
+    scanf("%lf",&originalPrice);
+
+    printf("Enter sales tax percentage:");
+    scanf("%lf",&tax);
+
+    printf("Enter the amount of discount:");
+    scanf("%lf",&discount);
+
+   double afterTax = originalPrice*(1.0 +tax/100.0);
+   double theDiscount = originalPrice*(discount/100.0);
+   specialPrice = afterTax - theDiscount;
+
+   printf("\nOur rules\n 1.Tax is applied first.\t 2.Discount is applied to the customer");
+
+   printf("The original price is: $%.2lf\n",originalPrice);
+   printf("The price after tax is: $%.2lf\n",afterTax);
+   printf("The discount amount is: $%.2lf\n",theDiscount);
+   printf("Your special price is: $%.2lf\n",specialPrice);
+
+   return EXIT_SUCCESS;
+
+}
