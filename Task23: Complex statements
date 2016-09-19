@@ -13,6 +13,9 @@
 */
 
 
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -53,9 +56,26 @@ int main(void){
     a = 5; //Reset to original value
     printf("a before: %d\n",a);
     integerResult = (a++)*b; //a is used in the multiplication and then incremented
-    printf("integerResult: %d\n",integerResult);
+    printf("integerResult: %d\n",integerResult);-
     printf("a after: %d\n",a);
 
+    puts("----------- PART 4-----------------");
+    int initialValue = 0;
+    int increment = 5;
+    int counter = 1;
+    int result = initialValue + increment*counter++; //counter is first used
+    printf("result first time: %d counter: %d\n",result ,counter);
+       result = initialValue + increment*counter++;
+    printf("result second time: %d counter: %d\n",result ,counter);
+        result = initialValue + increment*(++counter);//counter is first incremented
+    printf("result third time: %d counter: %d\n",result,counter);
+
     return 0;
+
+
+
+
+
+
 
 }
