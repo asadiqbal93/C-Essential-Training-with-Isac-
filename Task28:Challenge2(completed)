@@ -1,0 +1,35 @@
+/*
+    Challenge#2 Objectives
+    -Write a program in C that calculates the freezing(0 C) and boiling (100 C) temperature of water in Fahrenheit and Kelvin
+    -Use the following formulas
+    F = C 9/5 +32
+    K = C + 273
+
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(void){
+
+  float celsius , fahrenheit , kelvin;
+  //Reads temperature in celsius from user input
+  printf("Enter temperature in Celsius: ");
+  scanf("%f",&celsius);
+  //Converts temperature from celsius to fahrenheit
+  fahrenheit = ((celsius *9)/5) + 32;
+  printf("\n%.2f Celsius = %.2f Fahrenheit\n",celsius,fahrenheit);
+  //Converts temperature from celsius to kelvin
+  kelvin = (celsius + 273);
+  printf("\n%2.f Celsius = %.2f Kelvin\n",celsius,kelvin);
+
+
+  return 0;
+
+
+}
+//Challenge completed in 7minutes 54seconds (Total time for challenge 10minutes)
+//F* Yes
+
