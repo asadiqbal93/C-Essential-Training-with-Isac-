@@ -1,0 +1,45 @@
+/*
+    Variable Declaration
+-Variables must be declared before use
+-Can be declared all in one place
+-Can be declared right before use
+-Can be declared in external file #include "code.h
+
+*/
+
+//Nothing important this program does just simple illustration of when to use variables
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    //Some variables can be declared here as a group
+    int x;
+    int y;
+    int z;
+
+    z = x + y;
+
+    //Some variables can be declared right before they are needed
+    char a;
+    a = getchar();
+
+    char b;
+    b = getchar();
+
+    char c;
+    c = getchar();
+
+    //The following is correct but would you really
+    //want to write a code like this?
+    double xx=2.3;
+    double yy=1.2;
+    double zz=2.3;
+
+    printf("value of xx =%f",xx);
+    printf("value of yy =%f",yy);
+    printf("value of zz =%f",zz);
+
+
+    return 0;
+
+}
