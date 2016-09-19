@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+/*
+        Challenge Objectives
+        -Write a program in C that receives as input a height in centimeters.
+        -The program will then calculate and display the following:
+
+            -The height in feet and inches
+
+*/
+
+int main(void){
+
+    //Variable declarations
+
+    float cm = 0;
+    float ft = 0;
+    float inch = 0;
+    float height = 0;
+
+
+    //Promt user for input
+    printf("What is the height in cm?:");
+    scanf("%f",&cm);
+
+
+    //Conversion formula to be coded now
+   inch = (float)cm *0.393701;
+   ft = (float)cm *0.0328084;
+
+    //Displaying values of height in feet and inches
+    printf("Height in Inch: %f\n",inch);
+    printf("Height in feet: %f\n",ft);
+
+    return 0;
+
+
+}
+//Challenge completed in 9minutes 26 seconds (Total time for challenge 20minutes)
+//F* yes
