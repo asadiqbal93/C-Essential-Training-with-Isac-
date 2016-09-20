@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(void){
+    printf("Enter the small number: ");
+    int smallNum;
+    scanf("%d",&smallNum);
+
+    printf("Enter the large number: ");
+    int largeNum;
+    scanf("%d",&largeNum);
+
+    listNumbers(smallNum,largeNum,1);
+
+    return EXIT_SUCCESS;
+
+}
+
+void listNumbers(int small , int large , int k){
+//k is used as a counter as listed in the challenge - k is incremented by 1 as it counts the steps
+//When small+1 equals to the large one thats when the program stops because of the if statement
+    printf("Step[%d]: %d\n",k,small);
+        if(small<large)
+                listNumbers(small+1,large,k+1);
+}
