@@ -1,0 +1,151 @@
+/*
+=============================================================================================================
+                                        Returning Data from functions
+
+                                    Return Vs. No Return
+                        -Functions are mini programs , which may or may not return a result.
+                        -If the function returns a result , a return type is required.
+                        -If no result is returned , the function data type is void.
+                                        No result is Returned
+                    A function that does not return a result
+                    -Example
+                    void addNumbers(void){
+                        float x = 2.4;
+                        float y = 3.1;
+                        result = x + y;
+                        printf("Sum = %f",result);
+                    }
+                    addNumbers(); ---The result is printed by the function
+                                    Result is returned
+                    A function that returns a result
+                    -Example
+                    Float addNumbers(float x , float y){
+                     result = x + y;
+                     return result;
+
+                    }
+                    ---The function returns the sum into a variable
+                    float theResult = addNumbers(2.6, 4.2);
+                    printf("Sum = %f", theResult);
+
+
+============================================================================================================
+
+*/
+
+/*
+===========================================================================================
+Name: functionalProgramming.c
+Author: Asad Iqbal
+Version: 1.0
+Copyright: asadiqbal93
+Description: Returning data from functions , azzy-style
+             This program demonstrates the use of functions , parameters, and returned
+             values to calculate statistics for a basketball game.
+
+===========================================================================================
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//Function prototypes
+int calculateTotalPointsMade(int q1,int q2,int q3,int q4);
+float calculateAveragePoints(int q1,int q2,int q3,int q4);
+float twoPointsPerformance(int totalShots,int shotsMade);
+float threePointsPerfformance(int totalShots, int shotsMade);
+void  displayStatistics(int totalPoints, int total2Points,int total3Points,float averagePerQuarter,float twoPoints,float threePoints);
+
+int main(void){
+    //Variable declarations
+    int twoPointQ1;
+    int threePointQ1;
+    int totalShotQ1;
+
+    int twoPointQ2;
+    int threePointQ2;
+    int totalShotQ2;
+
+    int twoPointQ3;
+    int threePointQ3;
+    int totalShotQ3;
+
+    int twoPointQ4;
+    int threePointQ4;
+    int totalShotQ4;
+
+    printf("Enter the number of shorts in the 1st quarter:");
+    scanf("%d",&totalShotQ1);
+    printf("Enter the number of 2-point shots MADE in the 1st quarter:");
+    scanf("%d",&twoPointQ1);
+    printf("Enter the number of 3-point shorts MADE in the 1st quarter:");
+    scanf("%d",&threePointQ1);
+
+    printf("Enter the number of shorts in the 2nd quarter:");
+    scanf("%d",&totalShotQ2);
+    printf("Enter the number of 2-point shots MADE in the 2nd quarter:");
+    scanf("%d",&twoPointQ2);
+    printf("Enter the number of 3-point shorts MADE in the 2nd quarter:");
+    scanf("%d",&threePointQ2);
+
+    printf("Enter the number of shorts in the 3rd quarter:");
+    scanf("%d",&totalShotQ3);
+    printf("Enter the number of 2-point shots MADE in the 3rd quarter:");
+    scanf("%d",&twoPointQ3);
+    printf("Enter the number of 3-point shorts MADE in the 3rd quarter:");
+    scanf("%d",&threePointQ3);
+
+    printf("Enter the number of shorts in the 4th quarter:");
+    scanf("%d",&totalShotQ4);
+    printf("Enter the number of 2-point shots MADE in the 4th quarter:");
+    scanf("%d",&twoPointQ4);
+    printf("Enter the number of 3-point shorts MADE in the 4th quarter:");
+    scanf("%d",&threePointQ4);
+
+   // -------------------- CALCULATE STATISTICS-----------------------
+
+    int totalPoints = calculateTotalPointsMade(totalShotQ1,totalShotQ2,totalShotQ3,totalShotQ4);
+    int total2Points = calculateTotalPointsMade(twoPointQ1,twoPointQ2,twoPointQ3,twoPointQ4);
+    int total3Points = calculateTotalPointsMade(threePointQ1,threePointQ2,threePointQ3,threePointQ4);
+
+    float averagePerQuarter = calculateAveragePoints(totalShotQ1,totalShotQ2,totalShotQ3,totalShotQ4);
+    float twoPoints = twoPointsPerformance(totalPoints, total2Points);
+    float threePoints = threePointsPerfformance(totalPoints,total3Points);
+
+    displayStatistics(totalPoints,total2Points,total3Points,averagePerQuarter,twoPoints,threePoints);
+
+    return 0;
+
+}
+
+    //-------------------- FUNCTION DEFINITIONS------------------------
+
+  int calculateTotalPointsMade(int q1 , int q2 , int q3 , int q4){
+
+    double sum = q1+q2+q3+q4;
+    return sum;
+
+  }
+
+float calculateAveragePoints(int q1,int q2,int q3, int q4){
+
+    float average = (q1+q2+q3+q4)/4.0;
+    return average;
+
+}
+
+float twoPointsPerformance(int totalShots,int shotsMade){
+
+    float performance = ((float)shotsMade/(float)totalShots)*100.0;
+    return performance;
+
+}
+
+float threePointsPerfformance(int totalShots,int shotsMade){
+    float performance = ((float)shotsMade/(float)totalShots)*100.0;
+    return performance;
+
+}
+
+
+//Program needs to be debugged
