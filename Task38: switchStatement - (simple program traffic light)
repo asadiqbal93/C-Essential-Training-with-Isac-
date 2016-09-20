@@ -1,0 +1,82 @@
+/*
+                The switch statement
+            -Building complex decision making tools with switch statements
+            -(example)-
+        switch(trafficLightColor){
+            case 'r';
+                stopDriving();
+                break;
+            case 'y'
+                getReadyToMove();
+                break;
+            case 'g':
+                youCanDriveNow();
+                break;
+            default:
+                trafficLightMalfunction();
+        }
+
+*/
+
+//Improvement of nested IF-ELSE-IF statement coding
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+//Function prototypes
+void processColour(char c);
+void checkTrafficLight(void);
+void stopDriving(void);
+void getReady(void);
+void startDriving(void);
+void trafficLightMalfunction(void);
+
+int main(void){
+    checkTrafficLight();
+    return EXIT_SUCCESS;
+}
+
+// ----FUNCTION DEFINITIONS----
+void checkTrafficLight(void){
+    printf("What color does the traffic light show?\n");
+    printf(" r=red\n y=yellow\n g=green\n\n Choice:");
+    char color;
+    color = getchar();
+    processColor(color);
+}
+void processColor(char color){
+    /*
+     * This is a more elegant way than using nested if-else statements
+     */
+     switch(color){
+
+     case 'r':
+         stopDriving();
+         break;
+
+     case 'y':
+        getReady();
+        break;
+
+     case 'g':
+        startDriving();
+        break;
+
+     default:
+            trafficLightMalfunction();
+     }
+}
+void stopDriving(){
+    printf("You must stop the car now\n");
+}
+void getReady(){
+    printf("Shift the gear but keep the break pedal pressed");
+}
+void startDriving(){
+    printf("Pop a gear and disappear!");
+}
+void trafficLightMalfunction(void){
+    printf("This is an unrecognized color. Is there a malfunction?\n");
+}
