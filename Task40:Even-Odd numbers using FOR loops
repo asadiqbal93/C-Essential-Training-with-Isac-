@@ -1,0 +1,53 @@
+/*
+                The need for loops in a program
+                ________________________________
+            - Repeatedly execute statements using loops
+            - The need for loops
+                1) On different data sets
+                2) Same data set but with different parameters
+                3) Repeat execution until some condition is met
+                  The For Loop
+                e.i:
+                    for*(k = START_VALUE; k < MAX_VALUE; k+= INCREMENT){
+
+                        doSomething;
+                     doAnotherThing;
+
+                    }
+
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void listEvenNumbers(void);
+void listOddNumbers(void);
+
+int main(void){
+    listEvenNumbers();
+    listOddNumbers();
+    return EXIT_SUCCESS;
+}
+
+//---- FUNCTION DEFINITIONS ----
+void listEvenNumbers(){
+    printf("All EVEN numbers between 0 and 100:\n");
+    printf("--------------------------------------------------------------------------\n");
+    int i;
+        for(i=0;i<=100;i+=2){
+
+            printf("%d\t",i);
+        }
+
+}
+void listOddNumbers(){
+    printf("All ODD numbers between 0 and 100:\n");
+    printf("---------------------------------------------------------------------------\n");
+    int i;
+        for(i=1;i<=100;i+=2){
+
+            printf("%d\t",i);
+        }
+
+}
