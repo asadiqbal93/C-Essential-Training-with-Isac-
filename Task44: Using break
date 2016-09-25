@@ -1,0 +1,42 @@
+/*
+Using Break
+____________
+-Used to break the loop cycle
+-Read until end of line unless you read 'x'
+
+ small example
+    while((c = getchar()) != '\n'_){
+        if(c == 'x')
+            break; //stop if you read x
+
+    }
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//Function prototype
+void testBreak(void);
+
+int main(void){
+    testBreak();
+    return EXIT_SUCCESS;
+
+}
+
+void testBreak(void){
+    int n;
+    int loopCounter = 0;
+    while(1){
+        printf("Cycle [%d]: Enter a number\n",loopCounter);
+        scanf("%d",&n);
+        //two safety measures imposed on the program
+        //either you press 0 to stop the loop or when the cycle reaches 10 loops it automatically stops
+        if((n == 0) || (loopCounter >= 10))
+            break; //stop if you read 0
+        loopCounter++;
+    }
+
+}
+
