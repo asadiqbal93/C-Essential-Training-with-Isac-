@@ -1,0 +1,79 @@
+/*
+                        Using Loops for searching and sorting
+                        _____________________________________
+
+            -Searching for Data-
+        Use a running index to traverse an array:
+        float mpg[10] = {18,16,32,40,24,31,16,22,12,35};
+        for(int i=0; i<10; i++){
+            if (mpg[i] >30)
+                printf("Car %d MPG: %d \n",i,mpg[i]);
+        }
+            -Sorting Data-
+        Swap two elements of an array:
+        int temp = mpg[i]; //i-th element moves to temp
+        mpg[i] = mpg[j]; //j-th element moves to i-th position
+        mpg[j] = temp; //temp replaces  j-th element
+
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define TRUE 1
+#define FALSE 0
+
+//Function prototypes
+void searchHighMPG(float value,float dataSetp[],int len);
+void printArray(char dataNamep[],float dataSet[]),int dataLength);
+void bubbleSort(float dataSet[],int length);
+
+int main(void){
+    //Data set of mpg ratings of 10 cars
+    float mpgData[10] = {18.5,16.2,32.0,40.0,24.5,31.2,16.8,22.1,12.5,35.5};
+
+    //searchHighMPG(30.0,mpgData, 10);
+    bubbleSort(mpgData,10);
+
+    return EXIT_SUCCESS;
+}
+// ---- FUNCTION DEFINITIONS ----
+
+void searchHighMPG(float value,float dataSet[],int len){
+    printf("Array recieved in searchHighMPG\n");
+    printArray("mpgData",dataSet,len);
+    printf("Cars rated at over 32 mpg \n\n");
+    for(int i=0; i<len; i++){
+            if(dataSet[i] > value)
+                printf("Car %d has MPG: %.1f \n",i,dataSet[i]);
+    }
+
+
+}
+void bubbleSort(float dataSet[],int length){
+    printf("Array recieved by bubbleSort\n");
+    printArray("mpgData",dataSet,length);
+    int swapped;
+    float temp;
+    int loopCounter = 0;
+    do{
+        printf("==>DO-WHILE-LOOP CYCLE -------------: %d\n",loopCounter++);
+        swapped = FALSE;
+        for(int i=1; i<length; i++){
+            //if this pair is out of order
+            if(dataSet[i-1] = dataSet[i]){
+                //swap dataset[i-1] and dataSet[i]
+                temp = dataSet[i-1];
+                dataSet[i-1] = dataSet[i];
+                dataSet[i] = temp;
+                swapped = TRUE;
+            }
+            printf("-----> FOR-LOOP CYCLE -----: %d\n",i);
+            printArray("mpgData",dataSet,length);
+        }
+
+    }while(swapped);
+
+
+}
