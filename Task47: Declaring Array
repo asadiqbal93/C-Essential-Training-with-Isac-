@@ -1,0 +1,44 @@
+/*
+    Alternative array declarations
+    ______________________________
+
+    Explicit stating the size of the array
+
+    - int numbers[100];
+
+    Use a predefined constant
+
+    - int numbers[MAX_ITEMS];
+
+
+
+
+
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "constants.h"
+
+int main(void){
+
+    int scores[MAX_SCORES];
+    char word[MAX_LETTERS];
+    double data[MAX_DATA_POINTS];
+
+    return EXIT_SUCCESS
+
+}
+
+file: constants.h
+
+
+#ifndef CONSTANTS_H_
+#define CONSTANTS_H_
+
+#define MAX_SCORES      20
+#define MAX_LETTERS     10
+#define MAX_DATA_POINTS 50
+
+#endif // CONSTANTS_H_
