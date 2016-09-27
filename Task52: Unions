@@ -1,0 +1,47 @@
+/*
+        Understanding and performing union operations
+        _____________________________________________
+    -  Union operation -> Unions enable the storage of different data types in the same location
+
+    union symbol{
+    int number;
+    char letter;
+
+    }
+
+    - Heres an example
+    union symbol value; //value is of type symbol
+    value.number = 25;
+    value.letter = 'm';
+    union symbol *ptr // pointer to union
+    char myLetter = ptr->letter;
+
+
+
+
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void){
+
+    //---EXAMPLE 1---
+    union symbol{
+        int number;
+        char letter;
+    };
+
+    union symbol value;
+    value.number = 25;
+    value.letter = 'm';
+
+    union symbol *ptr; //pointer to union
+    ptr = &value;
+    char myLetter = ptr ->letter;
+
+    printf("Letter field: %c\n",myLetter);
+    printf("Number field: %d\n",ptr->number); //109 is the asci code for 'm'
+}
