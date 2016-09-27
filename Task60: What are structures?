@@ -1,0 +1,30 @@
+/*
+
+        What are structures?
+
+    -Combine multiple types of variables into a single on for example : int , chars etc
+    -Enable the definition of complex types
+    -Enable the creation of complex variables
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_TITLE_LENGTH     40
+#define MAX_AUTHOR_LENGTH    30
+#define MAX_PUBLISHER_LENGTH 50
+
+int main(void){
+    /*
+        A structure with three fields , packed as one entity
+    */
+    struct book{
+    char title[MAX_TITLE_LENGTH];
+    char author[MAX_AUTHOR_LENGTH];
+    char publisher[MAX_PUBLISHER_LENGTH];
+
+    };
+
+
+
+}
