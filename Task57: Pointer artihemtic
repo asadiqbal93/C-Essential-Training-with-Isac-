@@ -1,0 +1,41 @@
+/*
+    Pointer arithmetic
+    Increment or decrement a pointer
+
+    int sizes[] = {15, 20, 30}; //3 values stored inside the array
+
+    int *ptr = sizes; //ptr points to start of array
+
+    ptr++; //point to the second value in the array
+
+    ptr--; //point to the first value in the array
+
+
+
+*/
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void){
+
+    int sizes[] = {15, 20, 30};
+
+    int *ptr = sizes;       //ptr points to start of array
+    printf("Address %x stores value %d\n",ptr,*ptr);
+
+    ptr++; //point to the second value in the array
+    printf("Address %x stores value %d\n",ptr,*ptr);
+
+    ptr++; //point the third value in the array
+    printf("Address %x stores value %d\n",ptr,*ptr);
+
+    ptr--;
+    printf("Address %x stores value %d\n",ptr,*ptr);
+
+    ptr--;
+    printf("Address %x stores value %d\n",ptr,*ptr);
+
+    return EXIT_SUCCESS;
+
+
+}
