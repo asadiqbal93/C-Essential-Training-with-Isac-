@@ -1,0 +1,40 @@
+/*
+                What is a pointer?
+                ___________________
+    A pointer is a variable used to store an address. It is a reminder that
+    C has low-level language characteristics
+    Declarations:
+    - int *pointerInt;
+    - char *letter;
+    - double *price;
+    
+    Variables and Pojnter Variables
+    Declare a variable and a pointer variable
+    
+    int size = 15;
+    int *pointerInt;
+    
+    Assign the address of the variable to the pointer;
+    
+    pointerInt = &size;
+
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+
+    //Declarations
+
+    int size = 15; //a variable
+    int *pointerInt; //a pointer variable
+    
+    //Assign the address of the variable to the pointer
+    pointerInt = &size;
+    
+
+    return 0;
+
+}
