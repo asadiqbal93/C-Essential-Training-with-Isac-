@@ -1,0 +1,61 @@
+/*
+            Data Management Using Sequential Files
+            ______________________________________
+
+        File
+            -A file is a named portion of a storage area(e.g. hard drive).
+    Sequential Files
+            -The program accesses the data sequentially:
+            -Open file in one of several modes
+                Close file
+                Read from file until desired location reached
+                Write to file when arrived at desired location
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//Function prototypes
+void readEntireFile(void);
+void readUntilMarket(char marker);
+void writeToFile(void);
+
+int main(void){
+
+    //readEntireFile();
+    //printf("\n-----------------------------------\n");
+    // readUntilMarket('m');
+     writeToFile();
+
+   return EXIT_SUCCESS;
+
+}
+void readEntireFile(){
+    int ch;
+    FILE *fp; //pointer to a file type
+    fp = fopen("This PC/Local Disk(E)/Codeblock projects","r");
+    ch = getc(fp);
+    while (ch != EOF){ //keep looping until End Of File
+        putchar(ch);   // print the characters read
+        ch = getc(fp);
+    }
+    fclose(fp);
+}
+void readUntilMarket(char marker){
+    int ch;
+    FILE *fp; //pointer to a file type
+    fp = fopen("This PC/Local Disk(E)/Codeblock projects","r");
+    ch = getc(fp);
+    while(ch != marker){ //keep looping until End Of File
+        putchar(ch);     // print the characters read
+        ch = getc(fp);
+    }
+}
+void writeToFile(){
+    FILE *fp;
+    fp = fopen("C:/User/SYS Teh/Documents/message2","w");
+    char name[10] = "Asad";
+    fprintf(fp,"This is a message for %s\n",name);
+    fclose(fp);
+}
