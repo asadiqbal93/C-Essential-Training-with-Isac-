@@ -1,0 +1,30 @@
+/*
+            Function Prototype
+            __________________
+
+        Allows for a function to be used before it is defined:
+
+        double func(double,double); //prototype
+        main(void){
+            double result = func(10,20);
+        }
+        double func(double x, double y){
+            return x * y;
+        }
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+double func(double, double); //prototype
+
+int main(void){
+    double result = func(10,20);
+    printf("result = %lf\n",result);
+
+    return EXIT_SUCCESS;
+}
+double func(double x, double y){
+    return x*y;
+}
