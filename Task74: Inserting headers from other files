@@ -1,0 +1,75 @@
+/*
+            Inserting Headers from other files
+            __________________________________
+
+        -Header Files
+            Enable the use of functions defined in external files
+                #include "myLibrary.h"
+            Functions are defined in myLibrary.h
+            Functions are implemented in myLibrary.c
+
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include "myLibrary1502.h"
+#include "myConstants1502.h"
+#include "myMacros1502.h"
+
+
+int main(void){
+    printf("Volume of a sphere with radius 5 = %lf\n",volumeSphere(5));
+
+    int list [] = {NUMBERS};
+    printf("The 4th element in list is %d\n",list[3]);
+    return EXIT_SUCCESS;
+
+}
+___________________________________________________________________________
+myLibrary1502.h
+
+
+#include<math.h>
+
+
+double areaTrapezoid(double,double,double);
+double volumeSphere(double);
+
+double areaTrapezoid(double Base, double base, double height){
+    return(Base+base)*height/2;
+}
+double volumeSphere(double r){
+        return (4.0/3.0)*M_PI*pow(r,2);
+}
+____________________________________________________________________________
+myConstants1502.h
+
+#ifndef MYCONSTANTS_H_
+#define MYCONSTANTS_H_
+
+#define MAX_ROOMS 10
+#define MAX_PRICE 45
+#define MIN_PRICE 25
+
+#define TRUE  1
+#define FALSE 0
+
+#define epsilon 0.00001
+#define delta   0.00001
+
+#endif // MYCONSTANTS_H_
+______________________________________________________________________________
+myMacros1502.h
+
+
+#ifndef MYMACROS1502_H_
+#define MYMACROS1502_H_
+
+//Object-like macros
+#define NUMBERS 10,2,5,7,23,452,6,723,45,
+
+//Function-like macros
+#define max(X, Y) ((X) > (Y) ? (X) : (Y))
+
+
+#endif // MYMACROS1502_H_
+_______________________________________________________________________________
