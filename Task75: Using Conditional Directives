@@ -1,0 +1,70 @@
+/*
+                Using Conditional Directives
+                ____________________________
+
+            Conditional directives:
+                #ifdef MACRO
+                    controlled text
+                #endif // MACRO
+
+                #if expression
+                    controlled text
+                #endif // expression
+
+                #if expression
+                    text-if-true
+                #else //Not expression
+                    text-if-false
+
+                #endif // expression
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "myHeaders.h"
+
+#undef MAX_PRICE
+#define MAX_PRICE 100
+
+#ifndef THRESHOLD
+    #define THRESHOLD 23.751
+#endif // THRESHOLD
+
+#define greet(name) \
+    printf("Thank you for shopping here," #name "\n")
+
+int main(void){
+    printf("MAX_PRICE = %d\n",MAX_PRICE);
+    printf("THRESHOLD = %f\n",THRESHOLD);
+
+    greet(Asad);
+    //predefined macros in C
+    printf("File :%s\n",__FILE__);
+    printf("Date :%s\n",__DATE__);
+    printf("Time :%s\n",__TIME__);
+    printf("Line :%d\n",__LINE__);
+    printf("ANSI :%d\n",__STDC__);
+    return EXIT_SUCCESS;
+
+}
+__________________________________________________________
+#include "myHeaders.h"
+
+#ifndef MYHEADERS_H_
+#define MYHEADERS_H_
+
+#define MAX_ROOMS 10
+#define MAX_PRICE 45
+#define MIN_PRICE 23
+
+#define TRUE  1
+#define FALSE 0
+
+#define epsilon 0.000001
+#define delta   0.000001
+
+
+#endif // MYHEADERS_H_
+
+
