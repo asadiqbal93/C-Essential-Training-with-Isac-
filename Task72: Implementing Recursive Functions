@@ -1,0 +1,59 @@
+/*
+                    Implementing Recursive Functions
+                    ________________________________
+
+
+                Function Prototype
+                __________________
+            -Call themselves until conditions cause them to halt
+
+            int Fibonacci(int n){
+                printf("n = %d\n",n);
+                if (n == 0) return 0;
+                if (n == 1) retunr 1;
+                    return Fibonacci(n-1) + Fibonacci(n-2)
+            }
+
+            int main(void){
+                printf("result: %d\n",Fibonacci(10));
+            }
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int Fibonacci(int n){
+    /*
+        These are all recursive calls.
+        Uncomment the printf line below if you
+        want to follow the recursive process
+        Warning: There will be many lines printed
+    */
+
+    //printf("n = %d\n",n);
+
+    if(n == 0)
+        return 0;
+    else if (n == 1)
+        return 1;
+    else
+        return Fibonacci(n-1) + Fibonacci(n-2);
+}
+void generateFibonacci(int numbers){
+    //These are the first <numbers> values
+    //in the Fibonacci series
+    int i;
+    int n=0;
+    for(i=0;i<numbers;i++){
+        printf("[%2d]: %5d\n",n,Fibonacci(n));
+        n++;
+    }
+}
+//Notice that main is now at the bottom
+//It can be anywhere and it is always the
+//first function to be executed
+int main(void){
+    generateFibonacci(25);
+    return EXIT_SUCCESS;
+}
